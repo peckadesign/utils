@@ -1,0 +1,28 @@
+{
+	"name": "pd/utils",
+	"license": "BSD",
+	"type": "library",
+	"description": "Collection of various tools and utilities supporting web development",
+	"authors": [
+		{
+			"name": "PeckaDesign",
+			"email": "support@peckadesign.cz"
+		},
+		{
+			"name": "Petr Klobás",
+			"email": "petr.klobas@peckadesign.cz"
+		}
+	],
+	"require": {
+		"php": "7.1.*"
+	},
+	"require-dev": {
+		"pd/coding-standard": "1.21.*",
+		"phpstan/phpstan-shim": "0.10.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Pd\\Utils\\": "src"
+		}
+	}
+}

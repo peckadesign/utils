@@ -1,6 +1,6 @@
 {
 	"name": "pd/utils",
-	"license": "BSD",
+	"license": "MIT",
 	"type": "library",
 	"description": "Collection of various tools and utilities supporting web development",
 	"authors": [

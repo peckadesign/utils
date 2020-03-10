@@ -18,7 +18,7 @@
 	},
 	"require-dev": {
 		"pd/coding-standard": "1.21.*",
-		"phpstan/phpstan-shim": "0.10.*",
+		"phpstan/phpstan-shim": "0.11.12",
 		"nette/tester": "2.3.*"
 	},
 	"autoload": {

@@ -164,13 +164,13 @@ final class Validators
 	{
 		$identifier = \preg_replace('#\s+#', '', $identifier);
 
-		if ( ! \preg_match('#^\d{8}$#', $identifier)) {
+		if ( ! $identifier || ! \preg_match('#^\d{8}$#', (string) $identifier)) {
 			return FALSE;
 		}
 
 		$a = 0;
 		for ($i = 0; $i < 7; $i++) {
-			$a += $identifier[$i] * (8 - $i);
+			$a += (int) $identifier[$i] * (8 - $i);
 		}
 
 		$a = $a % 11;

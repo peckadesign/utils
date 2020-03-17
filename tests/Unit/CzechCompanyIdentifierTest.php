@@ -7,7 +7,7 @@ require __DIR__ . '/../bootstrap.php';
 /**
  * @testCase
  */
-final class ValidatorsTest extends \Tester\TestCase
+final class CzechCompanyIdentifierTest extends \Tester\TestCase
 {
 
 	/**
@@ -52,4 +52,4 @@ final class ValidatorsTest extends \Tester\TestCase
 
 }
 
-(new \PdTests\Unit\ValidatorsTest())->run();
+(new \PdTests\Unit\CzechCompanyIdentifierTest())->run();

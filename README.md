@@ -1,4 +1,4 @@
-![build](https://travis-ci.com/peckadesign/utils.svg?branch=master)
+[![Build Status](https://travis-ci.com/peckadesign/utils.svg?branch=master)](https://travis-ci.com/peckadesign/utils)
 ![coverage](https://img.shields.io/badge/coverage-100%25-green)
 
 # Pd\Utils

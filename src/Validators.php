@@ -100,6 +100,9 @@ final class Validators
 	}
 
 
+	/**
+	 * Checks whether input string DOESN'T contain src attributes with HTTP protocol inside to prevent content blocking
+	 */
 	public static function notContainsExternalSources(string $input): bool
 	{
 		\preg_match_all('/' . self::NOT_CONTAINS_EXTERNAL_SOURCES . '/', $input, $matches);
@@ -126,7 +129,7 @@ final class Validators
 	{
 		$dateArray = \explode('-', $date);
 		if (\count($dateArray) === 3) {
-			list($y, $m, $d) = $dateArray;
+			[$y, $m, $d] = $dateArray;
 
 			if (\checkdate((int) $m, (int) $d, (int) $y) && \strtotime("$y-$m-$d") && \preg_match('#\b\d{2}[/-]\d{2}[/-]\d{4}\b#', "$d-$m-$y")) {
 				return TRUE;
@@ -164,13 +167,13 @@ final class Validators
 	{
 		$identifier = \preg_replace('#\s+#', '', $identifier);
 
-		if ( ! \preg_match('#^\d{8}$#', $identifier)) {
+		if ( ! $identifier || ! \preg_match('#^\d{8}$#', (string) $identifier)) {
 			return FALSE;
 		}
 
 		$a = 0;
 		for ($i = 0; $i < 7; $i++) {
-			$a += $identifier[$i] * (8 - $i);
+			$a += (int) $identifier[$i] * (8 - $i);
 		}
 
 		$a = $a % 11;

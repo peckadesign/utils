@@ -14,11 +14,12 @@
 		}
 	],
 	"require": {
-		"php": "7.1.*"
+		"php": "^7.1"
 	},
 	"require-dev": {
 		"pd/coding-standard": "1.21.*",
-		"phpstan/phpstan-shim": "0.10.*"
+		"phpstan/phpstan": "0.12.18",
+		"nette/tester": "~2.3.2"
 	},
 	"autoload": {
 		"psr-4": {

@@ -5,6 +5,7 @@ namespace Pd\Utils;
 final class Validators
 {
 	public const PHONE_PATTERN = '\+[0-9]{3} ?[1-9][0-9]{2} ?[0-9]{3} ?[0-9]{3}';
+	public const PHONE_PATTERN_HU = '\+36 ?(([1-9]{1} ?[0-9]{3} ?[0-9]{4})|(([1-9]{1}[0-9]{1}[0-9]? ?[0-9]{3} ?[0-9]{3,4}))|([0-9]{3} ?[0-9]{2} ?[0-9]{3}))';
 	public const CONTAINS_NUMBER_PATTERN = '\d+';
 	public const NOT_CONTAINS_EXTERNAL_SOURCES = 'src=("|`|).*?(http(?!s))("|`|)';
 	public const ZIP_PATTERN = '[0-9]{3} ?[0-9]{2}';
@@ -88,9 +89,9 @@ final class Validators
 	}
 
 
-	public static function isPhone(string $phone): bool
+	public static function isPhone(string $phone, string $pattern = self::PHONE_PATTERN): bool
 	{
-		return (bool) \preg_match('/^' . self::PHONE_PATTERN . '$/', $phone);
+		return (bool) \preg_match('/^' . $pattern . '$/', $phone);
 	}
 
 

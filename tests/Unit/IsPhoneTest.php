@@ -17,13 +17,21 @@ final class IsPhoneTest extends \Tester\TestCase
 		\Tester\Assert::true(\Pd\Utils\Validators::isPhone($input));
 	}
 
-
 	/**
 	 * @dataProvider provideInvalidInput
 	 */
 	public function testInvalid(string $input): void
 	{
 		\Tester\Assert::false(\Pd\Utils\Validators::isPhone($input));
+	}
+
+
+	public function testHungarian(): void
+	{
+		\Tester\Assert::true(\Pd\Utils\Validators::isPhone('+36 800 88 002', \Pd\Utils\Validators::PHONE_PATTERN_HU));
+		\Tester\Assert::true(\Pd\Utils\Validators::isPhone('+36 1 229 8301', \Pd\Utils\Validators::PHONE_PATTERN_HU));
+
+		\Tester\Assert::false(\Pd\Utils\Validators::isPhone('+420 543 236 506', \Pd\Utils\Validators::PHONE_PATTERN_HU));
 	}
 
 

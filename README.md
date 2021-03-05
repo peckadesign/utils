@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.com/peckadesign/utils.svg?branch=master)](https://travis-ci.com/peckadesign/utils)
-![coverage](https://img.shields.io/badge/coverage-100%25-green)
+[![Testy](https://github.com/peckadesign/utils/actions/workflows/tests.yml/badge.svg)](https://github.com/peckadesign/utils/actions/workflows/tests.yml)
 
 # Pd\Utils
 

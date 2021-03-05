@@ -14,10 +14,10 @@
 		}
 	],
 	"require": {
-		"php": "^7.1"
+		"php": "^7.1 || ^8.0"
 	},
 	"require-dev": {
-		"pd/coding-standard": "1.21.*",
+		"pd/coding-standard": "1.27.*",
 		"phpstan/phpstan": "0.12.76",
 		"nette/tester": "~2.3.2"
 	},

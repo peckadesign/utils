@@ -4,6 +4,7 @@ namespace Pd\Utils;
 
 final class Validators
 {
+
 	public const PHONE_PATTERN = '\+[0-9]{3} ?[1-9][0-9]{2} ?[0-9]{3} ?[0-9]{3}';
 	public const PHONE_PATTERN_HU = '\+36 ?(([1-9]{1} ?[0-9]{3} ?[0-9]{4})|(([1-9]{1}[0-9]{1}[0-9]? ?[0-9]{3} ?[0-9]{3,4}))|([0-9]{3} ?[0-9]{2} ?[0-9]{3}))';
 	public const CONTAINS_NUMBER_PATTERN = '\d+';
@@ -188,4 +189,5 @@ final class Validators
 
 		return (int) $identifier[7] === $c;
 	}
+
 }
